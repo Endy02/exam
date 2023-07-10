@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/Screens/home/home.dart';
+import 'package:mobile/Screens/menu/menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,13 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const Home(),
+      initialRoute: '/', // Définissez la route initiale ici, si nécessaire
+      routes: {
+        '/dashboard': (context) => const Home(),
+        '/commande': (context) => const Home(),
+        '/menu':(context) => const Menu(),
+      },
+
     );
   }
 }
