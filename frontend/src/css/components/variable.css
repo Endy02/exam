@@ -1,14 +1,14 @@
 :root{
-    --cute-green: #A0CC83;
-    --weezy-sand: #F2D06D;
-    --cream-orange: #F2AF5E;
-    --danger-red: #D86247;
-    --sweat-violet: #9D82D8;
+    --cute-green: rgb(160, 204, 131);
+    --weezy-sand: rgb(242, 208, 109);
+    --cream-orange: rgb(242, 175, 94);
+    --danger-red: rgb(216, 98, 71);
+    --sweat-violet: rgb(157, 130, 216);
     --shade-cream-orange: linear-gradient(to right top, #f65d19, #e35618, #d14f17, #bf4815, #ad4114);
-    --fun-blue: #6AD8CD;
-    --regular-white: #ffffff;
-    --dark-grey: #7E7C7C;
-    --lazy-grey: #535252;
+    --fun-blue: rgb(106, 216, 205);
+    --regular-white: rgb(255, 255, 255);
+    --dark-grey: rgb(126, 124, 124);
+    --lazy-grey: rgb(83, 82, 82);
     --bottom-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     --left-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.16);
     --top-shadow: 0 -3px 6px 0 rgba(0,0,0,0.16);
