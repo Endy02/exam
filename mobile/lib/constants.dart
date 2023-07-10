@@ -9,3 +9,4 @@ const funBlue = Color.fromRGBO(106, 216, 205, 1);
 const darkGrey = Color.fromRGBO(126, 124, 124, 1);
 const lazyGrey = Color.fromRGBO(83, 82, 82, 1);
 const blackShadow = Color.fromRGBO(0, 0, 0, 0.16);
+const regularWhite = Color.fromRGBO(255, 255, 255, 1);

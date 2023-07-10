@@ -20,6 +20,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const Home(),
+      initialRoute: '/',
+      // routes: {
+      //   '/dashboard' : (context) => Dashboard()
+      // },
     );
   }
 }
