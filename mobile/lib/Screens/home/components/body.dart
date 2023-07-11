@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mobile/constants.dart';
 
 class Body extends StatelessWidget {
@@ -7,8 +6,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size =
-        MediaQuery.of(context).size; // Total size Height and width of screen
+    // Total size Height and width of screen
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
