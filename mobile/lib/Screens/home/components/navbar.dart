@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile/Screens/admin/admin.dart';
 import 'package:mobile/Screens/menu/menu.dart';
 import 'package:mobile/Screens/order/order.dart';
+import 'package:mobile/Screens/user/login.dart';
 import 'package:mobile/constants.dart';
 import 'package:mobile/Screens/home/components/body.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -38,17 +39,16 @@ class _BottomNavigationBarExampleState
             child: SvgPicture.asset("assets/images/logo_myresto.svg")),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.shopping_cart),
-            tooltip: 'Cart',
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a snackbar')));
-            },
-          ),
-          IconButton(
             icon: const Icon(Icons.supervised_user_circle),
             tooltip: 'User settings',
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        const Login()), // Remplacez AnotherScreen par le composant de destination que vous souhaitez afficher
+              );
+            },
           ),
           IconButton(
             icon: const Icon(Icons.admin_panel_settings),
