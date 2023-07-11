@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/Screens/menu/menu.dart';
 
 class Payement extends StatelessWidget {
   const Payement({Key? key});
@@ -63,6 +64,32 @@ class Payement extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 hintText: 'Nom et prénom du titulaire',
+              ),
+            ),
+            SizedBox(height: 16),
+            GestureDetector(
+              onTap: () {
+                  Navigator.pushNamed(context, '/commande');
+
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Text(
+                  'Suivant',
+                  style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black, decoration: TextDecoration.none
+
+                  ),
+                ),
               ),
             ),
           ],

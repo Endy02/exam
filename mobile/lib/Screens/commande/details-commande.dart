@@ -5,7 +5,12 @@ class RecapPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+
+    return  Scaffold(
+        appBar: AppBar(
+        title: Text('Répatitulatif'),
+    ),
+    body: Column(
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 48.0),
@@ -171,33 +176,8 @@ class RecapPage extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0), // Ajoute une marge horizontale de 16 pixels
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GestureDetector(
-                onTap: () {
-                  // Code pour l'action du bouton "Retour"
-                },
-                child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 2.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: Text(
-                    'Retour',
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                        decoration: TextDecoration.none
-
-                    ),
-                  ),
-                ),
-              ),
               GestureDetector(
                 onTap: () {
                   // Code pour l'action du bouton "Confirmer"
@@ -231,7 +211,7 @@ class RecapPage extends StatelessWidget {
           color: Colors.black,
         ),
       ],
+    ),
     );
-
   }
 }
