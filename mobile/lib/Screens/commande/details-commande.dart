@@ -15,6 +15,8 @@ class RecapPage extends StatelessWidget {
               fontSize: 32.0,
               fontWeight: FontWeight.bold,
               color: Colors.black,
+              decoration: TextDecoration.none
+
             ),
           ),
         ),
@@ -23,30 +25,32 @@ class RecapPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0), // Ajoute une marge horizontale de 16 pixels
+              padding: EdgeInsets.only(left: 8.0), // Ajoute une marge horizontale de 16 pixels
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Commande N° 713702',
                     style: TextStyle(
-                      fontSize: 24.0,
+                      fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
+                      decoration: TextDecoration.none
                     ),
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0), // Ajoute une marge horizontale de 16 pixels
+              padding: EdgeInsets.only(right: 8.0), // Ajoute une marge horizontale de 16 pixels
               child: Column(
                 children: [
                   Text(
                     'En cours de traitement',
                     style: TextStyle(
-                      fontSize: 16.0,
+                      fontSize: 12.0,
                       color: Colors.black,
+                      decoration: TextDecoration.none
                     ),
                   ),
                 ],
@@ -54,49 +58,48 @@ class RecapPage extends StatelessWidget {
             ),
           ],
         ),
-
-              SingleChildScrollView(
-    scrollDirection: Axis.horizontal,
-    child: Container(
-    decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(8.0),
-    border: Border.all(
-    color: Colors.black,
-    width: 1.0,
-    ),
-    ),
-    child: DataTable(
-    columnSpacing: 16.0,
-    headingRowColor: MaterialStateColor.resolveWith((states) => Colors.orange),
-    columns: [
-    DataColumn(
-    label: Text(
-    'Produits',
-    style: TextStyle(
-    fontWeight: FontWeight.bold,
-    color: Colors.white,
-    ),
-    ),
-    ),
-    DataColumn(
-    label: Text(
-    'Quantité',
-    style: TextStyle(
-    fontWeight: FontWeight.bold,
-    color: Colors.white,
-    ),
-    ),
-    ),
-    DataColumn(
-    label: Text(
-    'Prix',
-    style: TextStyle(
-    fontWeight: FontWeight.bold,
-    color: Colors.white,
-    ),
-    ),
-    ),
-    ],
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0),
+              border: Border.all(
+              color: Colors.black,
+              width: 1.0,
+              ),
+            ),
+            child: DataTable(
+              columnSpacing: 16.0,
+              headingRowColor: MaterialStateColor.resolveWith((states) => Colors.orange),
+              columns: [
+                DataColumn(
+                  label: Text(
+                    'Produits',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                DataColumn(
+                  label: Text(
+                    'Quantité',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                DataColumn(
+                  label: Text(
+                    'Prix',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
       rows: [
               DataRow(
                 cells: [
@@ -189,6 +192,8 @@ class RecapPage extends StatelessWidget {
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
+                        decoration: TextDecoration.none
+
                     ),
                   ),
                 ),
@@ -211,7 +216,8 @@ class RecapPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Colors.black, decoration: TextDecoration.none
+
                     ),
                   ),
                 ),

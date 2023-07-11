@@ -12,7 +12,6 @@ class Dashboard extends StatelessWidget {
             child: Container(
               child: Row(
                 children: [
-                  Sidebar(),
                   Expanded(
                     child: Container(
                       padding: EdgeInsets.all(16.0),
@@ -55,115 +54,127 @@ class Dashboard extends StatelessWidget {
                                   value: "75",
                                   isCircle: true,
                                 ),
-                                Container(
-                                  color: Colors.teal,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
+                                Expanded(
+                                  child: Container(
+                                    color: Colors.teal,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
                                       Text(
-                                        'Historique',
-                                        style: TextStyle(
-                                          fontSize: 16.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      SizedBox(height: 8.0),
-                                  Padding(
-                                    padding: EdgeInsets.symmetric(horizontal:15.0),
-                                    child:Table(
-                                        border: TableBorder.all(color: Colors.white),
-                                        children: [
-                                          TableRow(
-                                            children: [
-                                              TableCell(
-                                                child: Text(
-                                                  'Damn',
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                              TableCell(
-                                                child: Text(
-                                                  "That's a test brother",
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                              TableCell(
-                                                child: Text(
-                                                  'another col',
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                              TableCell(
-                                                child: Text(
-                                                  '01/02/2023',
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          TableRow(
-                                            children: [
-                                              TableCell(
-                                                child: Text(
-                                                  'Damn',
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                              TableCell(
-                                                child: Text(
-                                                  "That's a test brother",
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                              TableCell(
-                                                child: Text(
-                                                  'another col',
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                              TableCell(
-                                                child: Text(
-                                                  '01/02/2023',
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          TableRow(
-                                            children: [
-                                              TableCell(
-                                                child: Text(
-                                                  'Damn',
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                              TableCell(
-                                                child: Text(
-                                                  "That's a test brother",
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                              TableCell(
-                                                child: Text(
-                                                  'another col',
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                              TableCell(
-                                                child: Text(
-                                                  '01/02/2023',
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
+                                      'Historique',
+                                      style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
                                       ),
                                     ),
-                                    ],
+                                    SizedBox(height: 8.0),
+                                    Expanded(
+                                      child: SingleChildScrollView(
+                                        scrollDirection: Axis.vertical,
+                                        child: SingleChildScrollView(
+                                          scrollDirection: Axis.horizontal,
+                                          child: Container(
+                                              padding: EdgeInsets.symmetric(horizontal: 15.0),
+                                              child: Table(
+                                                defaultColumnWidth: IntrinsicColumnWidth(),
+                                                border: TableBorder.all(color: Colors.white),
+                                                children: [
+                                                  TableRow(
+                                                    children: [
+                                                      TableCell(
+                                                        child: Text(
+                                                          'Damn',
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                      TableCell(
+                                                        child: Text(
+                                                          "That's a test brother",
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                      TableCell(
+                                                        child: Text(
+                                                          'another col',
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                      TableCell(
+                                                        child: Text(
+                                                          '01/02/2023',
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  TableRow(
+                                                    children: [
+                                                      TableCell(
+                                                        child: Text(
+                                                          'Damn',
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                      TableCell(
+                                                        child: Text(
+                                                          "That's a test brother",
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                      TableCell(
+                                                        child: Text(
+                                                          'another col',
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                      TableCell(
+                                                        child: Text(
+                                                          '01/02/2023',
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  TableRow(
+                                                    children: [
+                                                      TableCell(
+                                                        child: Text(
+                                                          'Damn',
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                      TableCell(
+                                                        child: Text(
+                                                          "That's a test brother",
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                      TableCell(
+                                                        child: Text(
+                                                          'another col',
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                      TableCell(
+                                                        child: Text(
+                                                          '01/02/2023',
+                                                          style: TextStyle(color: Colors.white),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              )
+                                          ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
+
 
                                 DashboardItem(
                                   color: Colors.orange,
