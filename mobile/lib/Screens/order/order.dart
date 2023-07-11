@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/Screens/order/components/payment.dart';
 import 'package:mobile/constants.dart';
 
 class HeroSection extends StatelessWidget {
@@ -162,6 +163,15 @@ class MenuPage3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void handleClick() {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) =>
+                const Payment()), // Remplacez AnotherScreen par le composant de destination que vous souhaitez afficher
+      );
+    }
+
     return Column(
       children: [
         Container(
@@ -181,7 +191,9 @@ class MenuPage3 extends StatelessWidget {
                   physics: const NeverScrollableScrollPhysics(),
                   children: products.map((product) {
                     return GestureDetector(
-                      //                    onTap: handleClick,
+                      onTap: () {
+                        handleClick();
+                      },
                       child: DCard(
                         product: product,
                       ),

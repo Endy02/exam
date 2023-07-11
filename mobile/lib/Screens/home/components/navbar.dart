@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/Screens/admin/admin.dart';
 import 'package:mobile/Screens/menu/menu.dart';
 import 'package:mobile/Screens/order/order.dart';
 import 'package:mobile/constants.dart';
@@ -16,8 +17,6 @@ class BottomNavigationBarExample extends StatefulWidget {
 class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Body(),
     MenuPage2(),
@@ -44,6 +43,23 @@ class _BottomNavigationBarExampleState
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('This is a snackbar')));
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.supervised_user_circle),
+            tooltip: 'User settings',
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.admin_panel_settings),
+            tooltip: 'Admin pannel',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        const Dashboard()), // Remplacez AnotherScreen par le composant de destination que vous souhaitez afficher
+              );
             },
           ),
         ],
