@@ -6,6 +6,9 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Admin'),
+      ),
       body: Column(
         children: [
           Expanded(
@@ -17,12 +20,12 @@ class Dashboard extends StatelessWidget {
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         children: [
-                          const Row(
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               DashSelector(),
-                              Text(
-                                'Laurent Gina',
+                              const Text(
+                                'Groupe 3',
                                 style: TextStyle(
                                   fontSize: 16.0,
                                   fontWeight: FontWeight.bold,
@@ -38,18 +41,17 @@ class Dashboard extends StatelessWidget {
                               crossAxisSpacing: 16.0,
                               childAspectRatio: 1.5,
                               children: [
-                                const DashboardItem(
+                                DashboardItem(
                                   color: Colors.teal,
-                                  title:
-                                      "Chiffre d'affaire anzzznueleeeeeeeeeeeeeees",
+                                  title: "Chiffre d'affaire annuel",
                                   value: "1 550 000€",
                                 ),
-                                const DashboardItem(
+                                DashboardItem(
                                   color: Colors.orange,
                                   title: "Chiffre d'affaire mensuel",
                                   value: "550 000€",
                                 ),
-                                const DashboardItem(
+                                DashboardItem(
                                   color: Colors.purple,
                                   title: "Nombre clients",
                                   value: "75",
@@ -203,17 +205,17 @@ class Dashboard extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                const DashboardItem(
+                                DashboardItem(
                                   color: Colors.orange,
                                   title: "Commandes en cours",
                                   value: "75",
                                 ),
-                                const DashboardItem(
+                                DashboardItem(
                                   color: Colors.orange,
                                   title: "Commandes annulées",
                                   value: "75",
                                 ),
-                                const DashboardItem(
+                                DashboardItem(
                                   color: Colors.purple,
                                   title: "Commandes terminées",
                                   value: "75",
@@ -240,8 +242,6 @@ class Dashboard extends StatelessWidget {
 }
 
 class DashSelector extends StatelessWidget {
-  const DashSelector();
-
   @override
   Widget build(BuildContext context) {
     // Votre code pour le sélecteur de mois ici
@@ -256,7 +256,7 @@ class DashboardItem extends StatelessWidget {
   final bool isCircle;
   final Widget? child;
 
-  const DashboardItem({
+  DashboardItem({
     required this.color,
     required this.title,
     required this.value,

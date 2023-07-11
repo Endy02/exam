@@ -236,7 +236,6 @@ class DCard extends StatelessWidget {
         child: Column(
           children: [
             GestureDetector(
-              // onTap: handleClick,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
