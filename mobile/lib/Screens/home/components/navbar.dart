@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/Screens/menu/menu.dart';
 import 'package:mobile/Screens/order/order.dart';
 import 'package:mobile/constants.dart';
 import 'package:mobile/Screens/home/components/body.dart';
@@ -19,11 +20,8 @@ class _BottomNavigationBarExampleState
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Body(),
-    Text(
-      'Menu',
-      style: optionStyle,
-    ),
-    Order()
+    MenuPage2(),
+    OrderPage2()
   ];
 
   void _onItemTapped(int index) {
