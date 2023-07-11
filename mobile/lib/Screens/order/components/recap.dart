@@ -130,7 +130,7 @@ class RecapPage extends StatelessWidget {
                       ),
                       DataCell(
                         Text(
-                          '78,00 €',
+                          '9,99 €',
                           style: TextStyle(fontSize: 16.0),
                         ),
                       ),
