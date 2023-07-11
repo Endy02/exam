@@ -152,6 +152,7 @@ class MenuPage2 extends StatelessWidget {
         children: [
           const HeroSection(),
           const FeatureSection(),
+          const SizedBox(height: 16),
           MenuPage3(products: products)
         ],
       ),
