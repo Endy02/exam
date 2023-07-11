@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/Screens/order/order.dart';
 import 'package:mobile/constants.dart';
 import 'package:mobile/Screens/home/components/body.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -22,10 +23,7 @@ class _BottomNavigationBarExampleState
       'Menu',
       style: optionStyle,
     ),
-    Text(
-      'Commander',
-      style: optionStyle,
-    )
+    Order()
   ];
 
   void _onItemTapped(int index) {
