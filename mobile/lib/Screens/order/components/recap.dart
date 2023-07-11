@@ -136,37 +136,6 @@ class RecapPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  DataRow(
-                    cells: [
-                      DataCell(
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Mama Burger',
-                              style: TextStyle(fontSize: 16.0),
-                            ),
-                            Text(
-                              'Double Steak, Fromage, Bacon, Cornichon, Sauce Maison, Pain céréale.',
-                              style: TextStyle(fontSize: 14.0),
-                            ),
-                          ],
-                        ),
-                      ),
-                      DataCell(
-                        Text(
-                          '1',
-                          style: TextStyle(fontSize: 16.0),
-                        ),
-                      ),
-                      DataCell(
-                        Text(
-                          '55,00 €',
-                          style: TextStyle(fontSize: 16.0),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
               ),
             ),
