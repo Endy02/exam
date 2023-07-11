@@ -92,7 +92,7 @@ class FeatureSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16.0),
-      color: regularWhite,
+      color: Colors.orange,
       child: const Column(
         children: [
           Row(
@@ -142,14 +142,18 @@ class FeatureSection extends StatelessWidget {
   }
 }
 
-class OrderPage2 extends StatelessWidget {
-  const OrderPage2();
+class MenuPage2 extends StatelessWidget {
+  const MenuPage2();
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: [const FeatureSection(), MenuPage3(products: products)],
+        children: [
+          const HeroSection(),
+          const FeatureSection(),
+          MenuPage3(products: products)
+        ],
       ),
     );
   }
