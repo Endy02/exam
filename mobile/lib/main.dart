@@ -26,10 +26,10 @@ class MyApp extends StatelessWidget {
       home: const Home(),
       initialRoute: '/', // Définissez la route initiale ici, si nécessaire
       routes: {
-        '/dashboard': (context) => const Home(),
-        '/commande': (context) => const Home(),
-        '/menu':(context) => const Menu(),
-      },
+        '/dashboard': (context) => const Dashboard(),
+        '/commande': (context) => const RecapPage(),
+        '/menu': (context) => const MenuPage(),
+        },
 
     );
   }
