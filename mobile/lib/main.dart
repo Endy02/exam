@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:mobile/Screens/Admin/dashboard.dart'; // Remplacez le chemin par le chemin correct vers votre fichier dashboard.dart
 import 'package:mobile/Screens/menu/menu.dart';
 
+import 'Screens/commande/payement.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -29,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/dashboard': (context) => const Dashboard(),
         '/commande': (context) => const RecapPage(),
         '/menu': (context) => const MenuPage(),
+        '/payement': (context) => const Payement(),
         },
 
     );
