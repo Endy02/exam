@@ -309,28 +309,28 @@ List<Map<String, dynamic>> productList = [
     "prix": 9.99
   },
   {
-    "nom": "Salade César",
+    "nom": "Peachy Burger",
     "description":
-        "Salade fraîche avec de la laitue, des croûtons et du poulet grillé",
-    "prix": 7.99
+        "Délicieux burger avec du fromage, des oignons et de la sauce spéciale",
+    "prix": 9.99
   },
   {
-    "nom": "Salade César",
+    "nom": "Peachy Burger",
     "description":
-        "Salade fraîche avec de la laitue, des croûtons et du poulet grillé",
-    "prix": 7.99
+        "Délicieux burger avec du fromage, des oignons et de la sauce spéciale",
+    "prix": 9.99
   },
   {
-    "nom": "Salade César",
+    "nom": "Peachy Burger",
     "description":
-        "Salade fraîche avec de la laitue, des croûtons et du poulet grillé",
-    "prix": 7.99
+        "Délicieux burger avec du fromage, des oignons et de la sauce spéciale",
+    "prix": 9.99
   },
   {
-    "nom": "Salade César",
+    "nom": "Peachy Burger",
     "description":
-        "Salade fraîche avec de la laitue, des croûtons et du poulet grillé",
-    "prix": 7.99
+        "Délicieux burger avec du fromage, des oignons et de la sauce spéciale",
+    "prix": 9.99
   },
   {
     "nom": "Salade César",
