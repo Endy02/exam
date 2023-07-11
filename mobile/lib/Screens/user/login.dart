@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/Screens/home/home.dart';
 import 'package:mobile/Screens/user/register.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -88,6 +90,7 @@ class _LoginState extends State<Login> {
       onPressed: () {
         debugPrint("Username : ${usernameController.text}");
         debugPrint("Password : ${passwordController.text}");
+        login(usernameController.text, passwordController.text);
         Navigator.push(
           context,
           MaterialPageRoute(
@@ -128,5 +131,45 @@ class _LoginState extends State<Login> {
       context,
       MaterialPageRoute(builder: (context) => const Register()),
     );
+  }
+}
+
+Future<void> login(String username, String password) async {
+  // API endpoint for login
+  const String apiUrl = 'http://localhost:8000/user/login';
+
+  // Create the request body
+  final Map<String, dynamic> data = {
+    'username': "Edouard PROUST",
+    'password': "password",
+  };
+
+  try {
+    // Make the POST request to the login API
+    final response = await http.post(
+      Uri.parse(apiUrl),
+      body: jsonEncode(data),
+      headers: {'Content-Type': 'application/json'},
+    );
+
+    // Check the response status code
+    if (response.statusCode == 200) {
+      // Successful login
+      print('bravo : ${response.statusCode}');
+      final responseData = jsonDecode(response.body);
+      print('user : ${responseData}');
+      // Process the response data as needed
+      // e.g., save user information, authentication token, etc.
+    } else {
+      // Failed login
+      print('Login failed. Status code: ${response.statusCode}');
+      // Handle the error response
+      final errorData = jsonDecode(response.body);
+      // Process the error data and display appropriate error messages
+    }
+  } catch (e) {
+    // Error occurred during the API call
+    print('An error occurred: $e');
+    // Handle the error
   }
 }
