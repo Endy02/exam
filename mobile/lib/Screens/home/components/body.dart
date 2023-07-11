@@ -52,22 +52,6 @@ class Body extends StatelessWidget {
                     ),
                   ])),
           Padding(
-            padding: const EdgeInsets.only(bottom: 10),
-            child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: funBlue,
-                  minimumSize: const Size(150, 50),
-                ),
-                onPressed: () {},
-                child: const Text(
-                  "Commander",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 17,
-                      fontWeight: FontWeight.w500),
-                )),
-          ),
-          Padding(
             padding: const EdgeInsets.only(top: 10, bottom: 30),
             child: Column(children: [
               Padding(
@@ -109,22 +93,6 @@ class Body extends StatelessWidget {
                       ),
                     ),
                   ])),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 10),
-            child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: creamOrange,
-                  minimumSize: const Size(150, 50),
-                ),
-                onPressed: () {},
-                child: const Text(
-                  "Menu",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 17,
-                      fontWeight: FontWeight.w500),
-                )),
-          ),
           const Padding(
               padding:
                   EdgeInsets.only(bottom: 15, left: 20, right: 20, top: 60),
